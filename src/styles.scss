@@ -17,12 +17,9 @@ p {
 }
 
 input,
-button {
-    padding: 12px 20px;
-}
-
+button,
 p {
-    padding: 8px 8px;
+    padding: 12px 20px;
 }
 
 .error {
@@ -31,6 +28,10 @@ p {
 
 .error-border {
     box-shadow: 0 0 0 4px #ff8080 !important;
+}
+
+.error-msg {
+    padding: 0px 0px;
 }
 
 input:focus,
@@ -48,7 +49,7 @@ input {
     background-color: #f9f9f9;
 }
 
-@media (max-width: 665px) {
+@media (max-width: 960px) {
     input,
     button,
     p {

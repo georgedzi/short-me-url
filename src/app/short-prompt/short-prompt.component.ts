@@ -15,20 +15,20 @@ export class ShortPromptComponent {
   public shortenBtnTitle: string = "Shrink";
   public InvalidUrlError: string = "Invalid URL";
   public submitted: boolean = false;
-  public shortURL: string = "Default";
+  public shortURL: string = "default";
   public displayShort: boolean = false;
   private urlRegex = new RegExp(
-    '^(https?:\\/\\/)?' + // protocol
-      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
-      '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
-      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
-      '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
-      '(\\#[-a-z\\d_]*)?$', // fragment locator
+    '^(https?:\\/\\/)?' +
+    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' +
+    '((\\d{1,3}\\.){3}\\d{1,3}))' +
+    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' +
+    '(\\?[;&a-z\\d%_.~+=-]*)?' +
+    '(\\#[-a-z\\d_]*)?$',
     'i'
   );
 
   constructor() {
-    this.urlFormGroup = new FormGroup({ longUrl: new FormControl("", [Validators.required, Validators.pattern(this.urlRegex)])});
+    this.urlFormGroup = new FormGroup({ longUrl: new FormControl("", [Validators.required, Validators.pattern(this.urlRegex)]) });
   }
 
   onSubmit() {
@@ -42,15 +42,6 @@ export class ShortPromptComponent {
     else {
       this.submitted = true;
       this.displayShort = false;
-    }
-  }
-
-  isValidUrl(url: string) {
-    try {
-      new URL(url);
-      return true;
-    } catch (err) {
-      return false;
     }
   }
 }
