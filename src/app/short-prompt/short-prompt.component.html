@@ -1,0 +1,11 @@
+<form class="parent-container" [formGroup]="urlFormGroup" (ngSubmit)="onSubmit()">
+
+    <div class="contents-container">
+        <input class="long-url" [ngClass]="{'error-border': urlFormGroup.invalid && submitted}" formControlName="longUrl" [placeholder]="urlPlaceHolder" (keyup.enter)="onSubmit()">
+        <button>{{shortenBtnTitle}}</button>
+    </div>
+
+    <p [ngStyle]="(urlFormGroup.invalid && submitted) ? {'visibility': 'visible'} : {'visibility': 'hidden'}"
+        class="error">{{InvalidUrlError}}</p>
+
+</form>

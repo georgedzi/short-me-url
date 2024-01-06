@@ -1,0 +1,12 @@
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.flex-item {
+    flex: 1; /* Flex items take equal width in their row */
+}

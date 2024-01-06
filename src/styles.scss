@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+input,
+button,
+p {
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid transparent;
+    font-size: 36px;
+    box-sizing: border-box;
+    margin: 4px;
+}
+
+input,
+button {
+    padding: 12px 20px;
+}
+
+p {
+    padding: 8px 8px;
+}
+
+.error {
+    color: #ff8080;
+}
+
+.error-border {
+    box-shadow: 0 0 0 4px #ff8080 !important;
+}
+
+input:focus,
+button:focus {
+    box-shadow: 0 0 0 4px #80bdff;
+}
+
+button {
+    background-color: #059862;
+    color: white;
+}
+
+input {
+    color: #495057;
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 665px) {
+    input,
+    button,
+    p {
+        width:100%;
+    }
+}
