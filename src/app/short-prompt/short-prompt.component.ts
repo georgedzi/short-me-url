@@ -11,7 +11,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 })
 export class ShortPromptComponent {
   public urlFormGroup: FormGroup;
-  public urlPlaceHolder: string = "Enter URL...";
+  public urlPlaceHolder: string = "Super long URL here";
   public shortenBtnTitle: string = "Shrink";
   public InvalidUrlError: string = "Invalid URL";
   public submitted: boolean = false;

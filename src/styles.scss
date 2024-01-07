@@ -3,6 +3,7 @@ html,
 body {
     height: 100%;
     margin: 0;
+    background-color: #f5f5f5;
 }
 
 input,
@@ -10,16 +11,15 @@ button,
 p {
     border-radius: 10px;
     outline: none;
-    border: 1px solid transparent;
-    font-size: 36px;
+    font-size: 28px;
     box-sizing: border-box;
     margin: 4px;
+    padding: 16px 20px;
 }
 
 input,
-button,
-p {
-    padding: 12px 20px;
+button {
+    border: 1px solid #5f6368;
 }
 
 .error {
@@ -40,7 +40,7 @@ button:focus {
 }
 
 button {
-    background-color: #059862;
+    background-color: #50C878;
     color: white;
 }
 
@@ -49,10 +49,45 @@ input {
     background-color: #f9f9f9;
 }
 
-@media (max-width: 960px) {
+.card {
+    border: 3px #e8e9eb solid;
+    border-radius: 16px;
+    padding: 30px 40px 30px 40px;
+    background: #f5f5f5;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    width: -moz-available; 
+    max-width: 1000px;
+}
+
+.title {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    font-size: 80px;
+    background-color: #50C878;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+@media (max-width: 665px) {
     input,
     button,
     p {
-        width:100%;
+        width: 100%;
+    }
+
+    .card {
+        border: none;
+        border-radius: 0px;
+        padding: 0px;
+        background: #f5f5f5;
+        box-shadow: none;
+        width: -moz-available; 
+        max-width: 1000px;
+    }
+
+    .title{
+        font-size: 60px;
     }
 }
