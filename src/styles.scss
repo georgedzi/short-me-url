@@ -3,7 +3,6 @@ html,
 body {
     height: 100%;
     margin: 0;
-    background-color: #f5f5f5;
 }
 
 input,
@@ -11,15 +10,19 @@ button,
 p {
     border-radius: 10px;
     outline: none;
-    font-size: 28px;
+    border: 1px solid transparent;
+    font-size: 36px;
     box-sizing: border-box;
     margin: 4px;
-    padding: 16px 20px;
 }
 
 input,
 button {
-    border: 1px solid #5f6368;
+    padding: 12px 20px;
+}
+
+p {
+    padding: 8px 8px;
 }
 
 .error {
@@ -30,19 +33,13 @@ button {
     box-shadow: 0 0 0 4px #ff8080 !important;
 }
 
-.error-msg {
-    padding: 0px 0px;
-    margin: 0px;
-    font-size: 20px
-}
-
 input:focus,
 button:focus {
     box-shadow: 0 0 0 4px #80bdff;
 }
 
 button {
-    background-color: #50C878;
+    background-color: #059862;
     color: white;
 }
 
@@ -51,38 +48,10 @@ input {
     background-color: #f9f9f9;
 }
 
-.card {
-    border: 3px #e8e9eb solid;
-    border-radius: 16px;
-    padding: 30px 40px 30px 40px;
-    background: #f5f5f5;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    width: 100%;
-    box-sizing: border-box;
-    max-width: 1000px;
-}
-
-.title {
-    margin-top: 0px;
-    margin-bottom: 10px;
-    font-family: sans-serif;
-    font-size: 80px;
-    background-color: #50C878;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
-}
-
 @media (max-width: 665px) {
-    .card {
-        border: none;
-        border-radius: 0px;
-        padding: 0px;
-        background: #f5f5f5;
-        box-shadow: none;
-    }
-
-    .title{
-        font-size: 60px;
+    input,
+    button,
+    p {
+        width:100%;
     }
 }
